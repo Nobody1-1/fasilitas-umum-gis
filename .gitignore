@@ -1,0 +1,41 @@
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
+.env
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+
+/public/build
+/storage/pail
+.env.backup
+.env.production
+.phpactor.json
+auth.json
+
+=IF(OR(ISNUMBER(SEARCH("SD", AB22)), ISNUMBER(SEARCH("SMP", B2)), ISNUMBER(SEARCH("SMA", B2)), ISNUMBER(SEARCH("TK", B2))), "Educational Facility",
+    IF(OR(ISNUMBER(SEARCH("Masjid", B2)), ISNUMBER(SEARCH("Mushola", B2)), ISNUMBER(SEARCH("Islamic Center", B2))), "Religious Facility",
+        IF(OR(ISNUMBER(SEARCH("Klinik", B2)), ISNUMBER(SEARCH("Praktek", B2))), "Health Facility",
+            IF(OR(ISNUMBER(SEARCH("Balai Desa", B2)), ISNUMBER(SEARCH("Lapangan", B2))), "Community Facility",
+                "Other"
+            )
+        )
+    )
+)
+
